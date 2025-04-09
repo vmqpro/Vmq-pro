@@ -13,7 +13,6 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 + 自己独立部署，无后门风险(作者发誓有后门死全家)
 + 兼容vmq监控端，可使用支付宝微信小号/模拟器挂机，方便IOS用户
 
-> 未正式上线，再过两天，作者正在优化，演示站可用
 
 > 演示站：http://38.54.50.207:8087/#/admin
 >
@@ -40,11 +39,12 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 
 + 下载已经编译好的jar,位于GitHub的releases中
 
-
 + 确认本机已经拥有java的运行环境（JDK>=1.8）,如果没有，请您安装java的运行环境
-+ 在war包的同级目录，在控制台输入启动命令 java -javaagent:vmq-pro.jar -jar vmq-pro.jar
++ 在war包的同级目录，在控制台输入启动命令 java -javaagent:vmq-pro-encrypted.jar -jar vmq-pro-encrypted.jar
     + 请将vmq-pro.jar替换成您下载的jar包的名字
-    + 如果您需要自定义项目的运行端口，请您在启动的时候使用：java -javaagent:vmq-pro.jar -jar vmq-pro.jar --server.port=9090 (9090可以替换成任意端口)
+    + 如果您需要自定义项目的运行端口，请您在启动的时候使用：java -javaagent:vmq-pro-encrypted.jar -jar vmq-pro-encrypted.jar --server.port=9090 (9090可以替换成任意端口)
++ 打开浏览器，访问 https://localhost:8086/#/install 进入安装向导，填写mysql数据库连接信息，安装完成后重启项目
+    + 如果需要重新安装，请删除用户目录下的~/.vmqpro/install.lock 文件，并重启java程序
 + 打开浏览器，访问 https://localhost:8086/#/admin
 + 点击系统设置，进入设置页面，修改系统的默认配置
 + 下载V免签监控端到安卓手机或安卓模拟器，开启辅助服务，实现收款回调功能
@@ -70,8 +70,6 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 
 + v免签的监控端并不适配所有手机，遇到手机无法正常使用的时候，请您更换手机或使用模拟器挂机！
 
-+ v免签拥有双语言服务端，当您使用php版本服务端遇到问题的时候，请您尝试使用java版本服务端，php版本服务端配置略复杂，需要配置伪静态规则，请知悉！
-
 + 正常的安装步骤简略如下
     + 下载服务端部署(GitHub中下载的为最新版)
     + 登录网站后台更改系统设置
@@ -95,10 +93,11 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 
 + v1.0（2025.4.1）
     + 初版发布
++ v1.1（2025.4.10）
+    + 增加安装向导功能
 
 
 ## 版本预告
 
-+ 集成 bepusdt 插件
-+ 支持tgBot
-
++ 增加插件系统，可安装bepusdt插件，实现utsd购卡，回调
++ 增加TG bot，方便手机管理
