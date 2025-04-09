@@ -16,10 +16,8 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 > 未正式上线，再过两天，作者正在优化，演示站可用
 
 > 演示站：http://38.54.50.207:8087/#/admin
-> 
+>
 > 演示站配置垃圾，囊中羞涩，愿理解
-> 账号: admin
-> 密码: admin
 
 > 监控端推荐使用：  https://github.com/shinian-a/Vmq-App
 
@@ -40,12 +38,14 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 
 ## 安装
 
-+ 下载已经编译好的war,位于GitHub的releases中
++ 下载已经编译好的jar,位于GitHub的releases中
+
+
 + 确认本机已经拥有java的运行环境（JDK>=1.8）,如果没有，请您安装java的运行环境
-+ 在war包的同级目录，在控制台输入启动命令 java -jar v.war
-    + 请将v.war替换成您下载的war包的名字
-    + 如果您需要自定义项目的运行端口，请您在启动的时候使用：java -jar v.war --server.port=9090 (9090可以替换成任意端口)
-+ 打开浏览器，访问 localhost:8086
++ 在war包的同级目录，在控制台输入启动命令 java -javaagent:vmq-pro.jar -jar vmq-pro.jar
+    + 请将vmq-pro.jar替换成您下载的jar包的名字
+    + 如果您需要自定义项目的运行端口，请您在启动的时候使用：java -javaagent:vmq-pro.jar -jar vmq-pro.jar --server.port=9090 (9090可以替换成任意端口)
++ 打开浏览器，访问 https://localhost:8086/#/admin
 + 点击系统设置，进入设置页面，修改系统的默认配置
 + 下载V免签监控端到安卓手机或安卓模拟器，开启辅助服务，实现收款回调功能
 + 默认管理账号为：admin
@@ -99,6 +99,6 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 
 ## 版本预告
 
-+ 
-+ 
++ 集成 bepusdt 插件
++ 支持tgBot
 
