@@ -16,7 +16,9 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 
 
 > 演示站：http://38.54.50.207:8087/#/admin
+> 
 > 来这个卡盟领取体验码：http://fk.vmqpro.top/
+> 
 > 演示站配置垃圾，囊中羞涩，愿理解
 
 > 监控端推荐使用：  https://github.com/shinian-a/Vmq-App
@@ -56,7 +58,7 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 + 保存配置后，即可开始使用
 
 
-> 升级说明：请您直接下载新版本覆盖旧版本即可！
+> 升级说明：请您直接下载新版本覆盖旧版本即可。若启动不了，删除数据库和~/.vmqpro/install.lock 文件，重装！
 
 
 ## 说明
@@ -105,4 +107,4 @@ V免签-pro 是基于SpringBoot 2.5.15 + mysql 5.7 + vue 实现的一套免签�
 ## 版本预告
 
 + 增加插件系统，可安装bepusdt插件，实现utsd购卡，回调
-+ 增加TG bot，方便手机管理
++ 增加TG bot插件，方便手机管理
